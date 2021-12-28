@@ -14,8 +14,8 @@ namespace ConsoleApp1
         static int a = 10; // длина сада
         static int b = 10; // ширина сада
         static string[,] sad = new string[a, b];
-        static int efficiensy1 = 200; // задержка для первого садовника (условная "производительность")
-        static int efficiensy2 = 100; // задержка для второго садовника (условная "производительность")
+        static int efficienсy1 = 200; // задержка для первого садовника (условная "производительность")
+        static int efficienсy2 = 100; // задержка для второго садовника (условная "производительность")
         static int flag = 0;
 
         static void Gardener1() // моделирует работу первого садовника
@@ -32,7 +32,7 @@ namespace ConsoleApp1
                                 sad[x, y] = "1";
                             else
                                 sad[x, y] = "T";// латинская T
-                            Thread.Sleep(efficiensy1);
+                            Thread.Sleep(efficienсy1);
                         }
                         else { continue; }
                     }
@@ -47,7 +47,7 @@ namespace ConsoleApp1
                                 sad[x, y] = "1";
                             else
                                 sad[x, y] = "T";// латинская T
-                            Thread.Sleep(efficiensy1);
+                            Thread.Sleep(efficienсy1);
                         }
                         else { continue; }
                     }
@@ -70,7 +70,7 @@ namespace ConsoleApp1
                                 sad[x, y] = "2";
                             else
                                 sad[x, y] = "Т";// кириллическая T
-                            Thread.Sleep(efficiensy2);
+                            Thread.Sleep(efficienсy2);
                         }
                         else { continue; }
                     }
@@ -85,7 +85,7 @@ namespace ConsoleApp1
                                 sad[x, y] = "2";
                             else
                                 sad[x, y] = "Т";// кириллическая T
-                            Thread.Sleep(efficiensy2);
+                            Thread.Sleep(efficienсy2);
                         }
                         else { continue; }
                     }
@@ -112,7 +112,7 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine();
             }
-            Thread.Sleep(Math.Min(efficiensy1, efficiensy2));
+            Thread.Sleep(Math.Min(efficienсy1, efficienсy2));
         }
 
         static void Main(string[] args)
